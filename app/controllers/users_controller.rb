@@ -12,6 +12,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       # handle successful save
+      log_in @user
       flash[:success] = "Congrats on Signing up for nSpired -- off the mat!!"
       redirect_to @user
     else
