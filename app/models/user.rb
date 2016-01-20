@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
       # infers uniqueness will be true
       uniqueness: { case_sensitive: false }
   has_secure_password
-  validates :password, presence: true, length: { minimum: 6 }
+  validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
 
   # Return the hash digest of a given string
