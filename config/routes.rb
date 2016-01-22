@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
 
-  root            "users#index"
+  root           "account_activations#index"
   get 'qod' => "quotes#show"
   get 'quote' => "quotes#index"
+  get 'users' => "users#index"
   get 'signup' => "users#new"
   get 'login' => "sessions#new"
-  get 'about' => "account_activations#index"
   # get 'password_resets/new'
   # get 'password_resets/edit'
   post 'login' => "sessions#create"

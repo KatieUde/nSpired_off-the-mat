@@ -29,7 +29,40 @@ function searchQuote() {
       $.ajax(getQuoteCategories);
     }
   })
+  receiveQuoteOfDay();
 };
+
+
+function receiveQuoteOfDay() {
+  $("#qod-search.ui.floating.dropdown.labeled.search.icon.button").dropdown({
+    action: 'activate',
+    onChange: function(value, text, $selectedItem) {
+      console.log($selectedItem[0].innerHTML);
+      var qodCategory = $selectedItem[0].innerHTML;
+      console.log(qodCategory);
+      var getQodOptions = {
+        type: 'get',
+        url: 'http://quotes.rest/qod.json?category='+qodCategory+'&api_key=OCkgYvFtihssB_3SP894SQeF',
+        length: 500,
+        dataType: 'json',
+        success: function(data) {
+          console.log('Pulled from API!!');
+          console.log(data.contents.quotes[0]);
+          var qodImage = data.contents.quotes[0].background;
+          var qodQuote = data.contents.quotes[0].quote;
+          var qodAuthor = data.contents.quotes[0].author;
+          $("#qod-container").append(qodQuote + '    - ' + qodAuthor)
+          $("#api-qod").prop("src", qodImage);
+        },
+        error: function(error) {
+          console.log('Something did not happen as intended');
+        }
+      };
+      $.ajax(getQodOptions);
+    }
+  })
+};
+
 
 
 // function pickQuote() {
