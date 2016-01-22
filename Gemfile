@@ -29,12 +29,16 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 gem 'bcrypt'
 
+# Adding Semantic UI for CSS styling
 gem 'less-rails-semantic_ui', '~> 2.1.8'
 gem 'less-rails'
 gem 'autoprefixer-rails'
 gem 'therubyracer'
 
 gem 'sprockets-rails', '<=2.3.3'
+
+# Adding React to my app
+gem 'react-rails', '~> 1.0'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

@@ -1,29 +1,28 @@
-<header class="ui inverted menu">
-  <div class="container">
-    <%= link_to "nSpired", '#', id: "logo" %>
-    <nav>
-      <ul class ="nav">
-        <li><%= link_to "Home", '#' %></li>
-        <li><%= link_to "Help", '#' %></li>
-        <% if logged_in? %>
-          <li><%= link_to "Users", users_path %></li>
-          <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            Account <b class="caret"></b>
-          </a>
-          <ul class="dropdown-menu">
-            <li><%= link_to "Profile", current_user %></li>
-            <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-            <li class="divider"></li>
-            <li>
-            <%= link_to "Log out", logout_path, method: "delete" %>
-            </li>
-          </ul>
-        </li>
-        <% else %>
-          <li><%= link_to "Log in", login_path %></li>
-        <% end %>
-      </ul>
-    </nav>
+<header class="ui inverted stackable menu">
+  <div class="item">
+    <img src="/images/logo.png">
   </div>
-</header>
+    <div class="container">
+      <%= link_to "nSpired", '#', id: "logo" %>
+          <a class="item"><%= link_to "Home", '#' %></a>
+          <a class="item"><%= link_to "Help", '#' %></a>
+          <% if logged_in? %>
+            <li><%= link_to "Users", users_path %></li>
+            <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Account <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Profile", current_user %></li>
+              <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+              <li class="divider"></li>
+              <li>
+              <%= link_to "Log out", logout_path, method: "delete" %>
+              </li>
+            </ul>
+          </li>
+          <% else %>
+            <a class="item"><%= link_to "Log in", login_path %></a>
+          <% end %>
+      </div>
+    </header>

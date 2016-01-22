@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   get 'quote' => "quotes#index"
   get 'signup' => "users#new"
   get 'login' => "sessions#new"
-  get 'password_resets/new'
-  get 'password_resets/edit'
+  get 'about' => "account_activations#index"
+  # get 'password_resets/new'
+  # get 'password_resets/edit'
   post 'login' => "sessions#create"
   delete 'logout' => "sessions#destroy"
   resources :users
