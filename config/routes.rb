@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root            "users#index"
+  get 'qod' => "quotes#show"
   get 'quote' => "quotes#index"
   get 'signup' => "users#new"
   get 'login' => "sessions#new"

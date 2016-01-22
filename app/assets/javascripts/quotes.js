@@ -5,7 +5,7 @@ $(document).ready(function(){
 });
 
 function searchQuote() {
-  $(".ui.floating.dropdown.labeled.search.icon.button").dropdown({
+  $("#nSpire-quote.ui.floating.dropdown.labeled.search.icon.button").dropdown({
     action: 'activate',
     onChange: function(value, text, $selectedItem) {
       console.log($selectedItem[0].innerHTML);
