@@ -1,27 +1,25 @@
-<header class="ui inverted stackable menu">
-  <div class="item">
+<div class="ui inverted stackable menu">
+  <a class="item">
     <img src="">
-  </div>
+  </a>
       <%= link_to "nSpired", '#', id: "logo" %>
           <a class="item"><%= link_to "About", root_url %></a>
           <a class="item"><%= link_to "Quote of the Day", 'qod' %></a>
           <% if logged_in? %>
-            <div class="ui compact menu">
-            <div class="item"><%= link_to "Users", users_path %></div>
+            <a class="item"><%= link_to "Users", users_path %></a>
             <div class="ui simple dropdown item">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Account <b class="caret"></b>
+              Account
+              <i class="dropdown icon"></i>
             </a>
             <div class="menu">
-              <li><%= link_to "Profile", current_user %></li>
-              <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-              <li>
+              <div><%= link_to "Edit", edit_user_path(current_user) %></div>
+              <div><%= link_to "Profile", current_user %></div>
+              <div>
               <%= link_to "Log out", logout_path, method: "delete" %>
-              </li>
+              </div>
             </div>
           <% else %>
             <a class="item"><%= link_to "Log in", login_path %></a>
           <% end %>
       </div>
     </div>
-  </header>

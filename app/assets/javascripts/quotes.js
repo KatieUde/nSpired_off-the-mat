@@ -21,6 +21,7 @@ function searchQuote() {
           console.log(data.contents.qimage.download_uri);
           var quoteImage = data.contents.qimage.download_uri;
           $("#api-quote").prop("src", quoteImage);
+          $("#like").css("display", "")
         },
         error: function(error) {
           console.log('Something did not happen as intended');

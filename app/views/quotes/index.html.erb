@@ -1,45 +1,52 @@
-<h1>Find a quote to accompany you throughout the day</h1>
-
-
-<div class="ui floating dropdown labeled search icon button" id="nSpire-quote">
-  <i class="smile icon"></i>
-  <span class="text" id="mood-dropdown">Select Mood Boost Needed</span>
-    <div class="menu">
-      <div class="item" id="mood1" data-value="adventuresome">adventuresome</div>
-      <div class="item" id="mood2" data-value="amazeballs">amazeballs</div>
-      <div class="item" id="mood3" data-value="amazing">amazing</div>
-      <div class="item" id="mood4" data-value="anger">anger</div>
-      <div class="item" id="mood5" data-value="anxiety">anxiety</div>
-      <div class="item" id="mood6" data-value="awkward">awkward</div>
-      <div class="item" id="mood7" data-value="calm">calm</div>
-      <div class="item" id="mood8" data-value="courage">courage</div>
-      <div class="item" id="mood9" data-value="depression">depression</div>
-      <div class="item" id="mood10" data-value="fear">fear</div>
-      <div class="item" id="mood11" data-value="grief">grief</div>
-      <div class="item" id="mood12" data-value="heartbroken">heartbroken</div>
-      <div class="item" id="mood13" data-value="hope">hope</div>
-      <div class="item" id="mood14" data-value="humor">humor</div>
-      <div class="item" id="mood15" data-value="inspirational">inspirational</div>
-      <div class="item" id="mood16" data-value="joy">joy</div>
-      <div class="item" id="mood17" data-value="leadership">leadership</div>
-      <div class="item" id="mood18" data-value="loneliness">loneliness</div>
-      <div class="item" id="mood19" data-value="love">love</div>
-      <div class="item" id="mood20" data-value="motivation">motivation</div>
-      <div class="item" id="mood21" data-value="pain">pain</div>
-      <div class="item" id="mood22" data-value="patience">patience</div>
-      <div class="item" id="mood23" data-value="peace">peace</div>
-      <div class="item" id="mood24" data-value="play">play</div>
-      <div class="item" id="mood25" data-value="relaxation">relaxation</div>
-      <div class="item" id="mood26" data-value="sadness">sadness</div>
-      <div class="item" id="mood27" data-value="strength">strength</div>
-      <div class="item" id="mood28" data-value="trust">trust</div>
-    </div>
+<div class="ui two column centered grid">
+  <div class="column centered row">
+    <h1>Find a quote to accompany you throughout the day</h1>
   </div>
-
-    <br>
-    <br>
-    <br>
-
-    <div id="quote-container">
-      <img id="api-quote" src="" alt="" />
-    </div>
+  <div class="column centered row">
+    <div class="ui floating dropdown labeled search icon button" id="nSpire-quote">
+      <i class="smile icon"></i>
+      <span class="text" id="mood-dropdown">Select Mood Boost Needed</span>
+          <div class="menu">
+            <div class="item" id="mood1" data-value="adventuresome">adventuresome</div>
+            <div class="item" id="mood2" data-value="amazeballs">amazeballs</div>
+            <div class="item" id="mood3" data-value="amazing">amazing</div>
+            <div class="item" id="mood4" data-value="anger">anger</div>
+            <div class="item" id="mood5" data-value="anxiety">anxiety</div>
+            <div class="item" id="mood6" data-value="awkward">awkward</div>
+            <div class="item" id="mood7" data-value="calm">calm</div>
+            <div class="item" id="mood8" data-value="courage">courage</div>
+            <div class="item" id="mood9" data-value="depression">depression</div>
+            <div class="item" id="mood10" data-value="fear">fear</div>
+            <div class="item" id="mood11" data-value="grief">grief</div>
+            <div class="item" id="mood12" data-value="heartbroken">heartbroken</div>
+            <div class="item" id="mood13" data-value="hope">hope</div>
+            <div class="item" id="mood14" data-value="humor">humor</div>
+            <div class="item" id="mood15" data-value="inspirational">inspirational</div>
+            <div class="item" id="mood16" data-value="joy">joy</div>
+            <div class="item" id="mood17" data-value="leadership">leadership</div>
+            <div class="item" id="mood18" data-value="loneliness">loneliness</div>
+            <div class="item" id="mood19" data-value="love">love</div>
+            <div class="item" id="mood20" data-value="motivation">motivation</div>
+            <div class="item" id="mood21" data-value="pain">pain</div>
+            <div class="item" id="mood22" data-value="patience">patience</div>
+            <div class="item" id="mood23" data-value="peace">peace</div>
+            <div class="item" id="mood24" data-value="play">play</div>
+            <div class="item" id="mood25" data-value="relaxation">relaxation</div>
+            <div class="item" id="mood26" data-value="sadness">sadness</div>
+            <div class="item" id="mood27" data-value="strength">strength</div>
+            <div class="item" id="mood28" data-value="trust">trust</div>
+          </div>
+        </div>
+      </div>
+        <br>
+        <br>
+        <br>
+        <div class="column">
+          <div class="column centered row">
+            <div id="quote-container">
+              <img id="api-quote" src="" alt="" />
+              <button id="like" class="ui basic icon button" style="display:none;"><i class="empty red heart icon"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
