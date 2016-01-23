@@ -1,8 +1,7 @@
-<% provide(:title, "Log in") %>
 <h1>Log in</h1>
 
-<form class="ui form" id="login-form">
-    <%= form_for(:session, url: "/login", method: "post") do |f| %>
+<div class="ui form" id="login-form" method="POST">
+    <%= form_for :session, url: login_path do |f| %>
   <div class="field">
       <%= f.label :email %>
       <%= f.email_field :email %>
@@ -20,5 +19,5 @@
   </div>
       <%= f.submit "Log in", class: "ui button" %>
     <% end %>
-  </form>
     <p>New user? <%= link_to "Register now!", signup_path %></p>
+  </div>

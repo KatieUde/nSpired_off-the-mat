@@ -38,7 +38,7 @@ gem 'therubyracer'
 gem 'sprockets-rails', '<=2.3.3'
 
 # Adding React to my app
-gem 'react-rails', '~> 1.0'
+# gem 'react-rails', '~> 1.0'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

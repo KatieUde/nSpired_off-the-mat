@@ -1,12 +1,18 @@
 class SessionsController < ApplicationController
   def new
-    p "aerudhcjkn"
+    p 'chunka chunkja'
+    # check for post or get
+    # do an if...
+    # ...if get, render view
+    # else
+    # post that shit
+    # ...create method actions
   end
 
   def create
-    p "ueeueufheuhfuhou"
+    p params
+    p "i did ittttt"
     user = User.find_by(email: params[:session][:email].downcase)
-    p user
       if user && user.authenticate(params[:session][:password])
         # Log in the user and redirect to the user's show page
         if user.activated?
@@ -16,12 +22,12 @@ class SessionsController < ApplicationController
         else
           message = "Account not activated. "
           message += "Check your email for the activation link."
-          flash[:warning] = message
+          flash[:notice] = message
           redirect_to root_url
         end
         # Create an error message
       else
-        flash.now[:danger] = 'Invalid email & password combination'
+        flash.now[:notice] = 'Invalid email & password combination'
         render 'new'
       end
     end
