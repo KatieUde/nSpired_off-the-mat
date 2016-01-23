@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
-  searchQuote();
+  $.when( searchQuote() ).done(function() {
+       displayImage();
+});
 
 });
 
@@ -8,19 +10,24 @@ function searchQuote() {
   $("#nSpire-quote.ui.floating.dropdown.labeled.search.icon.button").dropdown({
     action: 'activate',
     onChange: function(value, text, $selectedItem) {
+      $("#api-quoteSearch-container").html("");
+      $("#like").css("display", "")
+      $("#api-quoteSearch-image").prop("src", "")
       console.log($selectedItem[0].innerHTML);
       var category = $selectedItem[0].innerHTML;
       console.log(category);
       var getQuoteCategories = {
         type: 'get',
-        url: 'http://quotes.rest/quote/image.json?category='+category+'&api_key=OCkgYvFtihssB_3SP894SQeF',
+        url: 'http://quotes.rest/quote.json?category='+category+'&api_key=OCkgYvFtihssB_3SP894SQeF',
         length: 500,
         dataType: 'json',
         success: function(data) {
           console.log('Pulled from API!!');
-          console.log(data.contents.qimage.download_uri);
-          var quoteImage = data.contents.qimage.download_uri;
-          $("#api-quote").prop("src", quoteImage);
+          console.log(data.contents.quote);
+          console.log(data.contents.author);
+          var quoteSearchText = data.contents.quote;
+          var quoteSearchAuthor = data.contents.author;
+          $("#api-quoteSearch-container").append(quoteSearchText + '    - ' + quoteSearchAuthor);
           $("#like").css("display", "")
         },
         error: function(error) {
@@ -32,6 +39,28 @@ function searchQuote() {
   })
   receiveQuoteOfDay();
 };
+
+function displayImage() {
+      var apiKey = '1941579-53462b4963e207ebcf4432c42';
+      var imageCategory = 'landscape';
+      var findQuoteImages = {
+      type: 'get',
+      url: 'https://www.pixabay.com/api/?key='+apiKey+'&q='+imageCategory+'&image_type=photo',
+      dataType: 'jsonp',
+      success: function(data) {
+        console.log('Pulled from API!!');
+        console.log(data);
+        console.log(data.hits[Math.floor(Math.random()*20)].webformatURL);
+        var quoteSearchImage = data.hits[Math.floor(Math.random()*20)].webformatURL;
+        $("#api-quoteSearch-image").prop("src", quoteSearchImage);
+      },
+      error: function(error) {
+        console.log('Something did not happen as intended')
+        }
+      }
+      $.ajax(findQuoteImages);
+    }
+
 
 
 function receiveQuoteOfDay() {
@@ -53,7 +82,7 @@ function receiveQuoteOfDay() {
           var qodQuote = data.contents.quotes[0].quote;
           var qodAuthor = data.contents.quotes[0].author;
           $("#qod-container").append(qodQuote + '    - ' + qodAuthor)
-          $("#api-qod").prop("src", qodImage);
+          $("#api-qod-image").prop("src", qodImage);
         },
         error: function(error) {
           console.log('Something did not happen as intended');
