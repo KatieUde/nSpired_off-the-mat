@@ -1,10 +1,8 @@
 <div class="ui inverted stackable menu">
-  <a class="item">
-    <img src="">
-  </a>
+  <a class="item"><img src=""></a>
       <%= link_to "nSpired", '#', id: "logo" %>
           <a class="item"><%= link_to "About", root_url %></a>
-          <a class="item"><%= link_to "Quote of the Day", 'qod' %></a>
+          <a class="item"><%= link_to "Quote of the Day", qod_url %></a>
           <% if logged_in? %>
             <a class="item"><%= link_to "Users", users_path %></a>
             <div class="ui simple dropdown item">
