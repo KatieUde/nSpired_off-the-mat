@@ -42,10 +42,14 @@
         <br>
         <br>
         <div class="column">
-          <div class="column centered row">
-              <img class="ui centered image" id="api-quoteSearch-image" src="" type="hidden"/>
+          <div class="column centered row";>
+            <div id="img-hide" style="display:none"><img class="ui centered image" id="api-quoteSearch-image" src=""/></div>
               <div id="api-quoteSearch-container" class="ui segments"></div>
-              <button id="like" class="ui basic icon button" style="display:none;"><i class="empty red heart icon"></i></button>
+              <form class="" action="/like/quote" method="post">
+                  <input id="likeQuoteText" type="hidden" name="quote" value="">
+                  <input id="likeQuoteAuthor" type="hidden" name="author" value="">
+                  <button id="like" class="ui basic icon button" type="submit" style="display:none;" name="favorite_quote" value="Like"><i class="empty red heart icon"></i>
+              </form>
             </div>
           </div>
         </div>

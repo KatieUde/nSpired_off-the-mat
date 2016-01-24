@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
-  $.when( searchQuote() ).done(function() {
-       displayImage();
-});
+  searchQuote();
+  receiveQuoteOfDay();
+  displayImage();
 
 });
 
@@ -12,7 +12,7 @@ function searchQuote() {
     onChange: function(value, text, $selectedItem) {
       $("#api-quoteSearch-container").html("");
       $("#like").css("display", "")
-      $("#api-quoteSearch-image").prop("src", "")
+      $("#img-hide").css("display", "")
       console.log($selectedItem[0].innerHTML);
       var category = $selectedItem[0].innerHTML;
       console.log(category);
@@ -28,17 +28,20 @@ function searchQuote() {
           var quoteSearchText = data.contents.quote;
           var quoteSearchAuthor = data.contents.author;
           $("#api-quoteSearch-container").append(quoteSearchText + '    - ' + quoteSearchAuthor);
+          $("#likeQuoteText").val(quoteSearchText);
+          $("#likeQuoteAuthor").val(quoteSearchAuthor);
           $("#like").css("display", "")
         },
         error: function(error) {
           console.log('Something did not happen as intended');
         }
-      };
+      }
       $.ajax(getQuoteCategories);
     }
   })
-  receiveQuoteOfDay();
+  // receiveQuoteOfDay();
 };
+
 
 function displayImage() {
       var apiKey = '1941579-53462b4963e207ebcf4432c42';
@@ -67,6 +70,8 @@ function receiveQuoteOfDay() {
   $("#qod-search.ui.floating.dropdown.labeled.search.icon.button").dropdown({
     action: 'activate',
     onChange: function(value, text, $selectedItem) {
+      $("#qod-container").html("")
+      $("#api-qod-image").html("");
       console.log($selectedItem[0].innerHTML);
       var qodCategory = $selectedItem[0].innerHTML;
       console.log(qodCategory);
