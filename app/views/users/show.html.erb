@@ -8,4 +8,13 @@
       </h1>
     </section>
   </aside>
+    <div>
+      <% if @user.likes.any? %>
+      <h3>Favorite Quotes (<%= @user.likes.count %>)</h3>
+        <ol class="likes">
+          <%= render @likes %>
+        </ol>
+      <%= will_paginate @likes %>
+    <% end %>
+  </div>
 </div>

@@ -45,12 +45,14 @@
           <div class="column centered row";>
             <div id="img-hide" style="display:none"><img class="ui centered image" id="api-quoteSearch-image" src=""/></div>
               <div id="api-quoteSearch-container" class="ui segments"></div>
-              <form class="" action="/like/quote" method="post">
-                  <input id="likeQuoteText" type="hidden" name="quote" value="">
-                  <input id="likeQuoteAuthor" type="hidden" name="author" value="">
-                  <button id="like" class="ui basic icon button" type="submit" style="display:none;" name="favorite_quote" value="Like"><i class="empty red heart icon"></i>
-              </form>
+                <form class="" action="/likes" method="post">
+                  <input type="hidden" name="user_id" value="<%= current_user.id %>">
+                  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                  <input id="likeQuoteText" type="hidden" name="quote_content" value="">
+                  <input id="likeQuoteAuthor" type="hidden" name="quote_author" value="">
+                  <button id="like" class="ui basic icon button" type="submit" style="display:none;"><i class="empty red heart icon"></i>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-      </div>
