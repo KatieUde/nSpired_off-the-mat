@@ -46,15 +46,16 @@ function searchQuote() {
 function displayImage() {
       var apiKey = '1941579-53462b4963e207ebcf4432c42';
       var imageCategory = 'landscape';
+      var imagePage = Math.floor(Math.random()*22);
       var findQuoteImages = {
       type: 'get',
-      url: 'https://www.pixabay.com/api/?key='+apiKey+'&q='+imageCategory+'&image_type=photo',
+      url: 'https://www.pixabay.com/api/?key='+apiKey+'&q='+imageCategory+'&image_type=photo&page='+imagePage+'&per_page=200',
       dataType: 'jsonp',
       success: function(data) {
         console.log('Pulled from API!!');
         console.log(data);
-        console.log(data.hits[Math.floor(Math.random()*20)].webformatURL);
-        var quoteSearchImage = data.hits[Math.floor(Math.random()*20)].webformatURL;
+        console.log(data.hits[Math.floor(Math.random()*200)].webformatURL);
+        var quoteSearchImage = data.hits[Math.floor(Math.random()*200)].webformatURL;
         $("#api-quoteSearch-image").prop("src", quoteSearchImage);
       },
       error: function(error) {
