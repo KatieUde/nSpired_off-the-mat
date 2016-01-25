@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'users' => "users#index"
   get 'signup' => "users#new"
   get 'login' => "sessions#new"
+  get 'meditate' => 'meditations#index'
   post 'login' => "sessions#create"
   delete 'logout' => "sessions#destroy"
   resources :users

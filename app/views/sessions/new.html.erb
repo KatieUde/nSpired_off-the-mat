@@ -1,8 +1,10 @@
+<div class="ui text stackable raised container segment">
+
 <h1>Log in</h1>
 
 <div class="ui form" id="login-form" method="POST">
     <%= form_for :session, url: login_path do |f| %>
-  <div class="field">
+  <div class="ten column field">
       <%= f.label :email %>
       <%= f.email_field :email %>
   </div>
@@ -20,4 +22,5 @@
       <%= f.submit "Log in", class: "ui button" %>
     <% end %>
     <p>New user? <%= link_to "Register now!", signup_path %></p>
-  </div>
+</div>
+</div>

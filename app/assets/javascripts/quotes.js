@@ -1,12 +1,12 @@
 $(document).ready(function(){
 
-  searchQuote();
-  receiveQuoteOfDay();
-  displayImage();
+
+
 });
 
 function searchQuote() {
   $("#nSpire-quote.ui.floating.dropdown.labeled.search.icon.button").dropdown({
+    on: 'click',
     action: 'activate',
     onChange: function(value, text, $selectedItem) {
       $("#api-quoteSearch-container").html("");
@@ -46,16 +46,16 @@ function searchQuote() {
 function displayImage() {
       var apiKey = '1941579-53462b4963e207ebcf4432c42';
       var imageCategory = 'landscape';
-      var imagePage = Math.floor(Math.random()*22);
+      var imagePage = Math.floor(Math.random()*10);
       var findQuoteImages = {
       type: 'get',
-      url: 'https://www.pixabay.com/api/?key='+apiKey+'&q='+imageCategory+'&image_type=photo&page='+imagePage+'&per_page=200',
+      url: 'https://www.pixabay.com/api/?key='+apiKey+'&q='+imageCategory+'&image_type=photo&page='+imagePage+'&per_page=50',
       dataType: 'jsonp',
       success: function(data) {
         console.log('Pulled from API!!');
         console.log(data);
-        console.log(data.hits[Math.floor(Math.random()*200)].webformatURL);
-        var quoteSearchImage = data.hits[Math.floor(Math.random()*200)].webformatURL;
+        console.log(data.hits[Math.floor(Math.random()*50)].webformatURL);
+        var quoteSearchImage = data.hits[Math.floor(Math.random()*50)].webformatURL;
         $("#api-quoteSearch-image").prop("src", quoteSearchImage);
       },
       error: function(error) {

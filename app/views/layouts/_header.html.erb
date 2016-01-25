@@ -4,7 +4,7 @@
           <a class="item" <%= link_to "nSpired Quote", quote_url %>></a>
           <a class="item" <%= link_to "Quote of the Day", qod_url %>></a>
           <% if logged_in? %>
-            <a class="item"<%= link_to "Users", users_path %>></a>
+            <a class="item"<%= link_to "Meditation", meditate_url %>></a>
           <div class="right menu">
             <div class="ui simple dropdown item">
               Account
@@ -13,10 +13,11 @@
             <div class="menu">
               <div class="item"><%= link_to "Edit", edit_user_path(current_user) %></div>
               <div class="item"><%= link_to "Profile", current_user %></div>
+              <div class="item"><%= link_to "All Users", users_path %></div>
               <div class="item"><%= link_to "Log out", logout_path, method: "delete" %></div>
             </div>
           <% else %>
-            <a class="item"<%= link_to "Log in", login_path %>></a>
+            <a class="right align item"<%= link_to "Log in", login_path %>></a>
           <% end %>
         </div>
       </div>
