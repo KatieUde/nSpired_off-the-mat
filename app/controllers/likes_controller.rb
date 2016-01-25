@@ -29,7 +29,7 @@ class LikesController < ApplicationController
 
 
     def correct_user
-      @like = current.user.likes.find_by(id: params[:id])
+      @like = current_user.likes.find_by(id: params[:id])
       redirect_to root_url if @like.nil?
     end
 end

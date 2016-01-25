@@ -4,6 +4,8 @@
   <br>
 	<span class=“quote_author”> -<%= like.quote_author %></span>
   <span>
+		<% if current_user?(like.user) %>
       <%= link_to "delete", like, method: :delete, data: { confirm: "Are you sure you would like to remove this quote?" } %>
+			<% end %>
   </span>
 </li>

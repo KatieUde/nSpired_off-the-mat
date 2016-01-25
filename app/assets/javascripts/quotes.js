@@ -3,7 +3,6 @@ $(document).ready(function(){
   searchQuote();
   receiveQuoteOfDay();
   displayImage();
-
 });
 
 function searchQuote() {
@@ -30,17 +29,18 @@ function searchQuote() {
           $("#api-quoteSearch-container").append(quoteSearchText + '    - ' + quoteSearchAuthor);
           $("#likeQuoteText").val(quoteSearchText);
           $("#likeQuoteAuthor").val(quoteSearchAuthor);
-          $("#like").css("display", "")
+          $("#like").css("display", "");
         },
         error: function(error) {
           console.log('Something did not happen as intended');
-        }
+        },
       }
       $.ajax(getQuoteCategories);
     }
   })
   // receiveQuoteOfDay();
 };
+
 
 
 function displayImage() {

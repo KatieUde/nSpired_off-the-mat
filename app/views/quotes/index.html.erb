@@ -1,11 +1,11 @@
 <div class="ui two column centered grid">
   <div class="column centered row">
-    <h1>Find a quote to accompany you throughout the day</h1>
+    <h1>Find a quote to accompany you throughout the day!</h1>
   </div>
   <div class="column centered row">
     <div class="ui floating dropdown labeled search icon button" id="nSpire-quote">
       <i class="smile icon"></i>
-      <span class="text" id="mood-dropdown">Select Mood Boost Needed</span>
+      <span class="text" id="mood-dropdown">Select by Mood or Emotion</span>
           <div class="menu">
             <div class="item" id="mood1" data-value="adventuresome">adventuresome</div>
             <div class="item" id="mood2" data-value="amazeballs">amazeballs</div>
@@ -50,9 +50,17 @@
                   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
                   <input id="likeQuoteText" type="hidden" name="quote_content" value="">
                   <input id="likeQuoteAuthor" type="hidden" name="quote_author" value="">
-                  <button id="like" class="ui basic icon button" type="submit" style="display:none;"><i class="empty red heart icon"></i>
+                  <button id="like" class="ui basic icon button" type="submit" style="display:none;"><i id="heart" class="empty red heart icon"></i>
                 </form>
               </div>
             </div>
           </div>
         </div>
+
+        <script>
+
+            $("#like").click(function() {
+            $("#heart.empty.red.heart.icon").addClass('red heart icon').removeClass('empty red heart icon');
+          });
+
+        </script>
