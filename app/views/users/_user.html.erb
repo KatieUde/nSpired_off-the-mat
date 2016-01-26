@@ -1,4 +1,11 @@
-<li>
-  <%= gravatar_for user, size: 80 %>
-  <%= link_to user.name, user %>
-</li>
+<div id="user card" class="ui card">
+  <div class="image">
+     <%= gravatar_for user, size: 50 %>
+  </div>
+  <div class="content">
+    <a class="header"><%= link_to user.name, user %></a>
+    <div class="meta">
+      <span class="date">Joined in 2016</span>
+    </div>
+  </div>
+</div>

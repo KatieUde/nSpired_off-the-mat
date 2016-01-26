@@ -75,6 +75,11 @@ footer {
   text-align: center;
 }
 
+#remove-quote-button {
+  text-align: center;
+  display: block !important;
+}
+
 #register-link {
   text-align: center;
   padding-top: 20px;
@@ -90,3 +95,12 @@ footer {
   font-family: lancelot, serif;
   font-size: 18px;
 }
+
+#card-button-holder {
+  padding-left: 60px !important;
+  padding-right: 60px !important;
+}
+
+/*a {
+  color: black !important;
+}*/
