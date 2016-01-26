@@ -11,10 +11,11 @@
     <div>
       <% if @user.likes.any? %>
       <h3>Favorite Quotes (<%= @user.likes.count %>)</h3>
-        <ol class="likes">
+        <div class="ui three stackable cards">
           <%= render @likes %>
-        </ol>
+
       <%= will_paginate @likes %>
+      </div>
     <% end %>
   </div>
 </div>
