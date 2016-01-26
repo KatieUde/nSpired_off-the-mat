@@ -25,15 +25,14 @@
         <%= f.label :password_confirmation, "Confirmation" %>
         <%= f.password_field :password_confirmation %>
     </div>
-        <%= f.submit "Save changes", class: "btn" %>
+    <div id="edit-profile-button">
+        <%= f.submit "Save changes", class: "ui button" %>
       <% end %>
+    </div>
+    <br>
       <div class="gravatar_edit">
         <%= gravatar_for @user %>
         <a href="http://gravatar.com/emails" target="blank">change</a>
       </div>
     </div>
   </div>
-
-  <br>
-  <br>
-  <br>

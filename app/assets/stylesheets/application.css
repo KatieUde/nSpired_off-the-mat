@@ -26,6 +26,12 @@ h1 {
   text-align: center;
 }
 
+h3 {
+  font-family: lancelot, serif;
+  font-size: 22px;
+}
+
+
 body {
   background-color: rgba(129, 229, 238, 0.94);
 }
@@ -35,15 +41,39 @@ footer {
   bottom: 0;
   width: 100%;
   background-color: black;
-  text-align: center;
   color: white;
 }
 
-img {
+#footer-control {
+  padding-top: 150px;
+  display: inline;
+}
+
+#footer-api-ref {
   width: 66px;
   height: 52px;
 }
 
-#api-ref {
+#footer-img-div {
   float: left;
+}
+
+#header-menu {
+  background: black !important;
+}
+
+
+#edit-profile-button {
+  text-align: center;
+}
+
+#copyright {
+  text-align: center;
+  bottom: 0;
+  padding-top: 1.8em;
+}
+
+.ui.button {
+  font-family: lancelot, serif;
+  font-size: 18px;
 }

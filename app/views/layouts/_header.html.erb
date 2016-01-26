@@ -10,8 +10,8 @@
               Account
               <i class="dropdown icon"></i>
             </a>
-            <div class="menu">
-              <div class="item"><%= link_to "Edit", edit_user_path(current_user) %></div>
+            <div id="header-menu" class="menu">
+              <div id="header-item-one" class="item"><%= link_to "Edit", edit_user_path(current_user) %></div>
               <div class="item"><%= link_to "Profile", current_user %></div>
               <div class="item"><%= link_to "All Users", users_path %></div>
               <div class="item"><%= link_to "Log out", logout_path, method: "delete" %></div>
