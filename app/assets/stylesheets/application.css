@@ -29,3 +29,21 @@ h1 {
 body {
   background-color: rgba(129, 229, 238, 0.94);
 }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+
+img {
+  width: 66px;
+  height: 52px;
+}
+
+#api-ref {
+  float: left;
+}

@@ -1,30 +1,79 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
 
-function popZen() {
+function modalZen() {
   $("#zen").hover(function() {
-    $("#zen-deat.ui.modal").modal('show');
+    $("#zen-det.ui.modal").modal('show');
     console.log('stuff is happening');
   });
 }
 
-function popVip() {
+function modalVip() {
   $("#vip").hover(function() {
-    $("#vip-deat.ui.modal").modal('show');
+    $("#vip-det.ui.modal").modal('show');
     console.log('stuff is happening');
   });
 }
 
-function popMind() {
+function modalMind() {
   $("#mind").hover(function() {
-    $("#mind-deat.ui.modal").modal('show');
+    $("#mind-det.ui.modal").modal('show');
     console.log('stuff is happening');
   });
 }
 
-function popLove() {
+function modalLove() {
   $("#love-kind").hover(function() {
-    $("#love-kind-deat.ui.modal").modal('show');
+    $("#love-kind-det.ui.modal").modal('show');
+    console.log('stuff is happening');
+  });
+};
+
+function modalMantra() {
+  $("#mantra").hover(function() {
+    $("#mantra-det.ui.modal").modal('show');
+    console.log('stuff is happening');
+  });
+};
+
+function modalYoga() {
+  $("#yoga").hover(function() {
+    $("#yoga-det.ui.modal").modal('show');
+    console.log('stuff is happening');
+  });
+};
+
+function modalSelf() {
+  $("#self").hover(function() {
+    $("#self-det.ui.modal").modal('show');
+    console.log('stuff is happening');
+  });
+};
+
+function modalTao() {
+  $("#tao").hover(function() {
+    $("#tao-det.ui.modal").modal('show');
+    console.log('stuff is happening');
+  });
+};
+
+function modalQigong() {
+  $("#qigong").hover(function() {
+    $("#qigong-det.ui.modal").modal('show');
+    console.log('stuff is happening');
+  });
+};
+
+function modalContemplate() {
+  $("#contemplate").hover(function() {
+    $("#contemplate-det.ui.modal").modal('show');
+    console.log('stuff is happening');
+  });
+};
+
+function modalAssist() {
+  $("#assist").hover(function() {
+    $("#assist-det.ui.modal").modal('show');
     console.log('stuff is happening');
   });
 };
