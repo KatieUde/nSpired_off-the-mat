@@ -67,6 +67,19 @@ footer {
   text-align: center;
 }
 
+#create-profile-button {
+  text-align: center;
+}
+
+#login-button {
+  text-align: center;
+}
+
+#register-link {
+  text-align: center;
+  padding-top: 20px;
+}
+
 #copyright {
   text-align: center;
   bottom: 0;
