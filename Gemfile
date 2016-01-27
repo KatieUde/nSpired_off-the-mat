@@ -39,7 +39,7 @@ gem 'sprockets-rails', '<=2.3.3'
 
 gem 'sweet-alert'
 
-gem 'rails_12factor', group: :production
+gem 'rails_12factor'
 
 
 
