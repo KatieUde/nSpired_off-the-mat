@@ -75,6 +75,10 @@ footer {
   text-align: center;
 }
 
+#forgot-pass-button {
+  text-align: center;
+}
+
 #remove-quote-button {
   text-align: center;
   display: block !important;
