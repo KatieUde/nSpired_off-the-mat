@@ -50,7 +50,7 @@
                   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
                   <input id="likeQuoteText" type="hidden" name="quote_content" value="">
                   <input id="likeQuoteAuthor" type="hidden" name="quote_author" value="">
-                  <button id="like" class="ui icon button" type="submit" style="display:none;"><i id="heart" class="empty red heart icon"></i>
+                  <button id="like" class="ui small icon button" type="submit" style="display:none;"><i id="heart" class="red heart icon"></i>
                 </form>
               </div>
             </div>
@@ -62,7 +62,7 @@
         $(document).ready(function(){
 
           searchQuote();
-          displayImage();
+
 
         });
 

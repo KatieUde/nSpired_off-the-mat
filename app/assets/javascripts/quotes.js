@@ -12,9 +12,11 @@ function searchQuote() {
       $("#api-quoteSearch-container").html("");
       $("#like").css("display", "")
       $("#img-hide").css("display", "")
+      $("#api-quoteSearch-image").prop("src", "");
       console.log($selectedItem[0].innerHTML);
       var category = $selectedItem[0].innerHTML;
       console.log(category);
+      displayImage();
       var getQuoteCategories = {
         type: 'get',
         url: 'http://quotes.rest/quote.json?category='+category+'&api_key=OCkgYvFtihssB_3SP894SQeF',
@@ -45,13 +47,15 @@ function searchQuote() {
 
 function displayImage() {
       var apiKey = '1941579-53462b4963e207ebcf4432c42';
-      var imageCategory = 'landscape';
+      var arrayOfCategories = ['ice', 'landscape', 'ocean', 'flower', 'sunrise', 'mist', 'hills']
+      var imageCategory = arrayOfCategories[Math.floor(Math.random()*6)];
       var imagePage = Math.floor(Math.random()*10);
       var findQuoteImages = {
       type: 'get',
       url: 'https://www.pixabay.com/api/?key='+apiKey+'&q='+imageCategory+'&image_type=photo&page='+imagePage+'&per_page=50',
       dataType: 'jsonp',
       success: function(data) {
+        console.log(imageCategory);
         console.log('Pulled from API!!');
         console.log(data);
         console.log(data.hits[Math.floor(Math.random()*50)].webformatURL);
