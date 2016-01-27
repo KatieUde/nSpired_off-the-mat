@@ -16,3 +16,4 @@
 //= require components
 //= require semantic_ui/semantic_ui
 //= require_tree .
+//= require sweet-alert

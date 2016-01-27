@@ -37,6 +37,8 @@ gem 'therubyracer'
 
 gem 'sprockets-rails', '<=2.3.3'
 
+gem 'sweet-alert'
+
 # Adding React to my app
 # gem 'react-rails', '~> 1.0'
 
