@@ -13,7 +13,6 @@
  *= require semantic_ui/semantic_ui
  *= require_tree .
  *= require_self
- *= require sweet-alert
  */
 
 * {
