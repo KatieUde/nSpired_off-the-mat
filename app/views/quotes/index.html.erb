@@ -2,10 +2,10 @@
   <div class="column centered row">
     <h1>Find a quote to accompany you throughout the day!</h1>
   </div>
-  <div class="column centered row">
+    <div class="column centered row">
     <div class="ui floating dropdown labeled search icon button" id="nSpire-quote">
       <i class="smile icon"></i>
-      <span class="text" id="mood-dropdown">Select by Mood or Emotion</span>
+        <span class="text" id="mood-dropdown">Select by Mood or Emotion</span>
           <div class="menu">
             <div class="item" id="mood1" data-value="adventuresome">adventuresome</div>
             <div class="item" id="mood2" data-value="amazeballs">amazeballs</div>
@@ -41,22 +41,48 @@
         <br>
         <br>
         <br>
-        <div class="column">
-          <div class="column centered row";>
-            <div id="img-hide" style="display:none"><img class="ui centered image" id="api-quoteSearch-image" src=""/></div>
-              <div id="api-quoteSearch-container" class="ui segments"></div>
-                <form class="" action="/likes" method="post">
-                  <input type="hidden" name="user_id" value="<%= current_user.id %>">
-                  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-                  <input id="likeQuoteText" type="hidden" name="quote_content" value="">
-                  <input id="likeQuoteAuthor" type="hidden" name="quote_author" value="">
-                  <button id="like" class="ui small icon button" type="submit" style="display:none;"><i id="heart" class="red heart icon"></i>
-                </form>
-              </div>
+      <div class="column">
+        <div class="column centered row";>
+          <div id="img-hide" style="display:none"><img class="ui centered image" id="api-quoteSearch-image" src=""/></div>
+            <div id="api-quoteSearch-container" class="ui segments"></div>
+              <form class="" action="/likes" method="post">
+                <input type="hidden" name="user_id" value="<%= current_user.id %>">
+                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                <input id="likeQuoteText" type="hidden" name="quote_content" value="">
+                <input id="likeQuoteAuthor" type="hidden" name="quote_author" value="">
+                <button id="like" class="ui small icon button" type="submit" style="display:none;"><i id="heart" class="red heart icon"></i>
+              </form>
             </div>
           </div>
-        </div>
 
+    <br>
+    <br>
+
+
+
+    <div class="ten wide column";>
+      <div id="reflection-prompts" class="ui segments">
+        <h3>Reflection Points</h3>
+          <div class="ui list">
+          <a class="item">
+            <i class="yellow moon icon"></i>
+              <div class="content">
+              <div class="header">Floated Icon</div>
+              <div class="description">This text will always have a left margin to make sure it sits alongside your icon</div>
+            </div>
+          </a>
+          <a class="item">
+            <i class="yellow moon icon"></i>
+            <div class="content">
+              <div class="header">Icon Alignment</div>
+              <div class="description">Floated icons are by default top aligned. To have an icon top aligned try this example.</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
         <script>
 
         $(document).ready(function(){
