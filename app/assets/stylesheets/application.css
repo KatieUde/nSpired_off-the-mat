@@ -108,6 +108,11 @@ footer {
   font-size: 18px;
 }
 
+.ui.message.alert-success {
+  display: inline-block;
+  left: 38%;
+}
+
 #card-button-holder {
   padding-left: 60px !important;
   padding-right: 60px !important;

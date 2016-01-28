@@ -10,6 +10,7 @@ function searchQuote() {
     action: 'activate',
     onChange: function(value, text, $selectedItem) {
       $("#api-quoteSearch-container").html("");
+      $(".ui.message.alert-success").detach();
       $("#api-quoteSearch-container").css("display", "");
       $("#like").css("display", "")
       $("#img-hide").css("display", "")
