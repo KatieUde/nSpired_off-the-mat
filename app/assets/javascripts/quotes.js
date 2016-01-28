@@ -10,6 +10,7 @@ function searchQuote() {
     action: 'activate',
     onChange: function(value, text, $selectedItem) {
       $("#api-quoteSearch-container").html("");
+      $("#api-quoteSearch-container").css("display", "");
       $("#like").css("display", "")
       $("#img-hide").css("display", "")
       $("#api-quoteSearch-image").prop("src", "");
@@ -76,6 +77,7 @@ function receiveQuoteOfDay() {
     action: 'activate',
     onChange: function(value, text, $selectedItem) {
       $("#qod-container").html("")
+      $("#qod-container").css("display", "")
       $("#api-qod-image").html("");
       console.log($selectedItem[0].innerHTML);
       var qodCategory = $selectedItem[0].innerHTML;

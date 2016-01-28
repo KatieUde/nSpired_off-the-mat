@@ -33,7 +33,9 @@ h3 {
 
 
 body {
-  background-color: rgba(129, 229, 238, 0.94);
+  /*background-color: rgba(129, 229, 238, 0.94);*/
+  background-image: url("Waterfall_1.jpg");
+  background-repeat: no-repeat;
 }
 
 footer {

@@ -13,12 +13,26 @@
   width: 40px;
 }
 
+#api-quoteSearch-image.ui.centered.image {
+  border: 20px solid #e0e1e2 !important;
+  border-radius: 30px;
+  box-shadow: 5px 5px 4px 4px rgb(71, 77, 84), 6px 6px 6px 6px rgb(108, 107, 68);
+}
+
+#api-qod-image.ui.centered.image {
+  border: 20px solid #e0e1e2 !important;
+  border-radius: 30px;
+  box-shadow: 5px 5px 4px 4px rgb(71, 77, 84), 6px 6px 6px 6px rgb(108, 107, 68);
+}
+
 #qod-container.ui.segments {
   background-color: #e0e1e2;
+  padding: 10px;
 }
 
 #api-quoteSearch-container.ui.segments {
   background-color: #e0e1e2;
+  padding: 10px;
 }
 
 #reflection-prompts.ui.segments {
