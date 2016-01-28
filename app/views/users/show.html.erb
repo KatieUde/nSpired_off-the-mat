@@ -10,7 +10,7 @@
   </aside>
     <div>
       <% if @user.likes.any? %>
-      <h3>Favorite Quotes (<%= @user.likes.count %>)</h3>
+      <h3 id="favs-title">Favorite Quotes (<%= @user.likes.count %>)</h3>
         <div class="ui three stackable cards">
           <%= render @likes %>
 

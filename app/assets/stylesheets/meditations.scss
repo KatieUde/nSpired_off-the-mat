@@ -11,6 +11,19 @@
   font-size: 22px !important;
 }
 
+table.ui.stackable.celled.padded.table {
+  border-radius: 20px;
+  margin-bottom: 100px;
+}
+
+#meditate-header {
+  margin-top: 40px;
+}
+
+#meditate-holder.ui.stackable.grid.container {
+  margin-top: 20px;
+}
+
 #flame-holder {
   background: rgb(52, 65, 87);
   color: white;
