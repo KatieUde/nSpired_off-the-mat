@@ -10,9 +10,19 @@ Whenever I teach a yoga session, I always start my classes by providing a quote 
 
 ![search quotes prompts](http://i.imgur.com/kKsQvx5.png)
 
-I built my application using the Ruby on Rails framework and the database utilized is postgresql. In addition, I integrated Semantic UI as a development framework for front-end styling along with standard HTML, CSS, javascript, and jquery. I had originally hoped to integrate react into this application for building out my UI, but I was unable to find adequate documentation to incorporate it into a Rails environment.
+##### Technologies
 
+I built my application using the Ruby on Rails framework and the database utilized is postgresql. In addition, I integrated Semantic UI as a development framework for front-end styling along with standard HTML, CSS, javascript, and jquery. I had originally hoped to integrate react into this application for building out my UI, but I was unable to find adequate documentation to successfully incorporate it into a Rails environment. The production version is hosted on heroku and account activation and password reset functionality is sent via sendgrid.
 
+##### General Approach
+
+Coming into this project, I knew that I wanted to utilize new technologies that I hadn't really worked with yet. I decided that I wanted to use Ruby on Rails as my framework and then either incorporate angular.js or react for displaying views. Once I had that much determined, I went ahead and created user stories and wireframes (see links below). Then it was time to tackle the code... I began with getting the back-end setup so my user sessions (registration, login, logout) were fully functional (RESTful) and thus other tables could be associated with users. While building this out, I decided I wanted to challenge myself to figure out account activiation and password reset, so that was incorporated into the code as well.
+
+Once the sessions were up and running, I had some time allotted to determine if working with react would be feasible (won out over angular). Unfortunately, after many hours spent trying to incorporate unsuccessfully, I ended up scrapping that endeavor and shifting my attention to integrating third party API's. I actually ended up using two separate ones, which I had not originally intended. The quotes are pulled from 'They Said So', https://theysaidso.com/api/#qimgcat, via a private key while the images are pulled from Pixabay, https://pixabay.com/.
+
+After ensuring all the necessary API data was being pulled in and rendered appropriately, then I worked on sending some of that data to my database, so users could have "liked" quotes saved/associated with their profiles. When all of that was up and running, I began to shift my focus over to more of the styling and really digging into the semantic framework to make my site responsive, user-friendly, and visually appealing.
+
+##### Installation Instructions
 
 If one wants to run a local version rather than accessing the app in production, please feel free to clone or fork the github repository. Also, please make sure to have rails installed (built with version 4.2.5) as well as ruby (built with version 2.2.0). In order to set up a local database as well, one will need to be sure to have postgreql. Last, in order to install all other dependencies (libraries, frameworks, etc...) one will need to be sure to bundle before running the local server in one's console via "rails s".
 
