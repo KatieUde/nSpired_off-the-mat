@@ -26,9 +26,10 @@ After ensuring all the necessary API data was being pulled in and rendered appro
 
 If one wants to run a local version rather than accessing the app in production, please feel free to clone or fork the github repository. Also, please make sure to have rails installed (built with version 4.2.5) as well as ruby (built with version 2.2.0). In order to set up a local database as well, one will need to be sure to have postgreql. Last, in order to install all other dependencies (libraries, frameworks, etc...) one will need to be sure to bundle before running the local server in one's console via "rails s".
 
-
-In addition, I will be pulling data via an API key from the following quote site: https://theysaidso.com/api/#qimgcat
-
 Link to User Stories: https://trello.com/b/gH70wQ6f/nspired
 
 Link to Wireframes: https://drive.google.com/file/d/0B5ZU55Leu8RVSm5sbzByRXVjOUU/view?usp=sharing
+
+##### Problems/Hurdles
+
+Throughout the course of this project I ran into several problems that took multiple hours to troubleshoot and resolve. The only hurdle that I did not overcame and ended up srapping instead was adding react into the mix of technologies. Everything else from my login form refusing to post to the database when my UI broke it, to my sessions being overly secure due to the account activation/password and not allowing "quote likes" to post properly to the database, ended up having a happy resolution. Even completely unexpected problems such as receiving a 'No Access-Control-Allow-Origin' error when trying to pull from one of the api's, I was able to resolve with much googling and learned that jsonp is an alternate way of implementing cross browser requests. 
